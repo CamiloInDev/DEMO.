@@ -25,7 +25,8 @@ RUN pip install --no-cache-dir \
     structlog \
     slowapi \
     sqladmin \
-    python-multipart
+    python-multipart \
+    itsdangerous
 
 COPY backend/ .
 
