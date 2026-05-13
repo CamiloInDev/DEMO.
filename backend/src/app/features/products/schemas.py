@@ -16,8 +16,9 @@ class ProductResponse(BaseModel):
     rating: float
     stock: int = 0
 
-    @field_serializer("images")
-    def serialize_images(self, v):
+    @field_validator("images", mode="before")
+    @classmethod
+    def parse_images(cls, v):
         if isinstance(v, str) and v:
             try:
                 return json.loads(v)
