@@ -26,7 +26,8 @@ RUN pip install --no-cache-dir \
     slowapi \
     sqladmin \
     python-multipart \
-    itsdangerous
+    itsdangerous \
+    psycopg2-binary
 
 COPY backend/ .
 
