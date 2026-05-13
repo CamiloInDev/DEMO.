@@ -65,3 +65,7 @@ backend/*.db
 *.pid
 *.seed
 *.pid.lock
+design-system/
+
+# --- AI agent skills (local, not for repo) ---
+.agents/
