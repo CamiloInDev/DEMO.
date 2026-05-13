@@ -6,8 +6,8 @@ from app.config import settings
 
 async_engine = create_async_engine(settings.database_url, echo=settings.debug)
 
-# Sync engine para SQLAdmin (usa 'sqlite:///' en vez de 'sqlite+aiosqlite:///')
-sync_db_url = settings.database_url.replace("sqlite+aiosqlite:///", "sqlite:///")
+# Sync engine para SQLAdmin
+sync_db_url = settings.database_url.replace("+asyncpg", "").replace("+aiosqlite", "").replace("+aio", "")
 sync_engine = create_engine(sync_db_url, echo=settings.debug)
 
 async_session_maker = async_sessionmaker(async_engine, class_=AsyncSession, expire_on_commit=False)
