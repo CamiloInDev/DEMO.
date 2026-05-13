@@ -1,0 +1,22 @@
+[
+  { "nombre": "Auriculares NoiseCancel Pro", "precio": 249.99, "descripcion": "Cancelación activa de ruido - 40h batería - Sonido 360°", "link": "/producto/1" },
+  { "nombre": "Parlante Bluetooth Portátil", "precio": 79.99, "descripcion": "30W - Resistente al agua - 12h batería - Conecta 2 a la vez", "link": "/producto/2" },
+  { "nombre": "Micrófono Condenser USB", "precio": 129.99, "descripcion": "Plug & play - Patrón cardioide - Ideal streaming/podcast", "link": "/producto/3" },
+  { "nombre": "Earbuds Inalámbricos Pro", "precio": 199.99, "descripcion": "Cancelación ruido - 30h totales - IPX5 - Estuche carga inalámbrica", "link": "/producto/4" },
+  { "nombre": "Teclado Mecánico Full RGB", "precio": 179.99, "descripcion": "Switches Cherry MX - Retroiluminación RGB - Aluminio anodizado", "link": "/producto/5" },
+  { "nombre": "Control Inalámbrico Pro", "precio": 69.99, "descripcion": "Compatibilidad PC/PS/Xbox - Batería 40h - Gatillos hápticos", "link": "/producto/6" },
+  { "nombre": "Silla Gaming Ergonómica", "precio": 399.99, "descripcion": "Soporte lumbar ajustable - Reposabrazos 4D - Base reforzada", "link": "/producto/7" },
+  { "nombre": "Mousepad XXL RGB", "precio": 39.99, "descripcion": "900x400mm - Superficie speed - Iluminación direccionable - Antideslizante", "link": "/producto/8" },
+  { "nombre": "Monitor UltraWide 34\"", "precio": 599.99, "descripcion": "UWQHD 144Hz - Curvo 1500R - HDR400 - USB-C 65W", "link": "/producto/9" },
+  { "nombre": "Monitor 27\" 4K IPS", "precio": 349.99, "descripcion": "4K UHD - 60Hz - HDR10 - Altavoces integrados - Ideal diseño", "link": "/producto/10" },
+  { "nombre": "Monitor Portátil 15.6\"", "precio": 199.99, "descripcion": "1080p IPS - USB-C - Peso 800g - Ideal laptop dual screen", "link": "/producto/11" },
+  { "nombre": "Soporte Monitor Dual", "precio": 89.99, "descripcion": "Brazo articulado 2 monitores - 4-13kg c/u - Gestión cables", "link": "/producto/12" },
+  { "nombre": "Mouse Ergonomic Pro", "precio": 89.99, "descripcion": "Sensor 16000 DPI - Batería 80h - Ultraligero 63g", "link": "/producto/13" },
+  { "nombre": "Hub USB-C 7 Puertos", "precio": 59.99, "descripcion": "HDMI 4K - SD/microSD - PD 100W - 10Gbps", "link": "/producto/14" },
+  { "nombre": "Base Laptop Adjustable", "precio": 49.99, "descripcion": "Aluminio - 6 niveles altura - Ventilación integrada - Plegable", "link": "/producto/15" },
+  { "nombre": "Cable USB-C Trenzado 2m", "precio": 19.99, "descripcion": "Carga rápida 100W - Datos 10Gbps - Nylon trenzado - 5 unidades", "link": "/producto/16" },
+  { "nombre": "Webcam 4K Pro Stream", "precio": 149.99, "descripcion": "4K 30fps - Auto-focus - Micrófono dual - Plug & play", "link": "/producto/17" },
+  { "nombre": "Cámara DSLR Starter", "precio": 499.99, "descripcion": "24.2MP - Lente 18-55mm - WiFi - 4K video - Ideal principiantes", "link": "/producto/18" },
+  { "nombre": "Gimbal Estabilizador 3 Ejes", "precio": 89.99, "descripcion": "Para smartphone/cámara acción - Bluetooth - 8h batería", "link": "/producto/19" },
+  { "nombre": "Micrófono Lavalier Inalámbrico", "precio": 39.99, "descripcion": "Plug & play - 50m alcance - 8h batería - Ideal entrevistas", "link": "/producto/20" }
+]

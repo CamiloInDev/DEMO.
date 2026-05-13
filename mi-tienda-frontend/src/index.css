@@ -1,0 +1,72 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@theme {
+  --font-heading: 'Cormorant', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --color-background: hsl(30, 6%, 10%);
+  --color-foreground: hsl(40, 20%, 97%);
+  --color-card: hsl(25, 10%, 14%);
+  --color-card-foreground: hsl(40, 20%, 97%);
+  --color-popover: hsl(30, 6%, 10%);
+  --color-popover-foreground: hsl(40, 20%, 97%);
+  --color-primary: hsl(42, 96%, 40%);
+  --color-primary-foreground: hsl(30, 6%, 10%);
+  --color-secondary: hsl(30, 5%, 25%);
+  --color-secondary-foreground: hsl(40, 20%, 97%);
+  --color-muted: hsl(25, 5%, 16%);
+  --color-muted-foreground: hsl(30, 4%, 35%);
+  --color-accent: hsl(42, 96%, 40%);
+  --color-accent-foreground: hsl(30, 6%, 10%);
+  --color-destructive: hsl(0, 62%, 50%);
+  --color-destructive-foreground: hsl(40, 20%, 97%);
+  --color-border: hsl(25, 5%, 20%);
+  --color-input: hsl(25, 5%, 20%);
+  --color-ring: hsl(42, 96%, 40%);
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+:focus-visible {
+  outline: 2px solid hsl(42, 96%, 40%);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes cart-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.8); }
+  100% { transform: scale(1); }
+}
+
+@keyframes float-up {
+  0% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-40px) scale(0.8); }
+}
+
+.animate-cart-pulse {
+  animation: cart-pulse 0.4s ease-out;
+}
+
+.animate-float-up {
+  animation: float-up 0.8s ease-out forwards;
+}

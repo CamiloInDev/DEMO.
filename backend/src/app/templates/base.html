@@ -1,0 +1,22 @@
+{% extends "sqladmin/base.html" %}
+{% block head %}
+{{ super() }}
+<style>
+  /* Responsive fixes for SQLAdmin */
+  @media (max-width: 768px) {
+    .page { padding: 0.5rem !important; }
+    .card-body { overflow-x: auto !important; }
+    .table { font-size: 0.85rem; }
+    .btn { white-space: nowrap; }
+    .container-fluid { padding: 0 !important; }
+    .page-header { flex-wrap: wrap; gap: 0.5rem; }
+    .page-header .actions { margin-left: 0 !important; width: 100%; }
+    .page-header .actions .btn { width: 100%; }
+    .navbar-brand { font-size: 1.1rem; }
+  }
+  /* Force horizontal scroll on table */
+  .table-responsive-custom { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  /* Make the new button always visible */
+  .page-header .actions { display: flex; align-items: center; }
+</style>
+{% endblock %}

@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "python-fastapi": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "f0b5b32a37181ef1a5c88f9b73a802dcb118eda1c3c2a2e9497ba9dfc72a6be0"
+    }
+  }
+}
