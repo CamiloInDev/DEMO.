@@ -3,9 +3,12 @@ import structlog
 from contextlib import asynccontextmanager
 from collections.abc import AsyncIterator
 
-from fastapi import FastAPI
+import os
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from starlette.middleware.sessions import SessionMiddleware
+from starlette.responses import FileResponse
 from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 from sqlalchemy import select
@@ -97,7 +100,7 @@ except Exception as e:
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -112,6 +115,14 @@ app.include_router(users_router, prefix="/api")
 app.include_router(orders_router, prefix="/api")
 
 
-@app.get("/")
-async def root():
-    return {"message": "Market API", "version": "0.1.0"}
+if os.path.isdir("static"):
+    class SPAStaticFiles(StaticFiles):
+        async def get_response(self, path: str, scope):
+            try:
+                return await super().get_response(path, scope)
+            except (HTTPException, Exception) as e:
+                if isinstance(e, HTTPException) and e.status_code == 404:
+                    return await super().get_response("index.html", scope)
+                raise
+
+    app.mount("/", SPAStaticFiles(directory="static", html=True), name="static")

@@ -1,8 +1,15 @@
+# Stage 1: Build frontend
+FROM node:20-alpine AS frontend
+
+WORKDIR /build
+COPY mi-tienda-frontend/ .
+RUN npm install && npm run build
+
+# Stage 2: Python backend + serve frontend
 FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY backend/pyproject.toml .
 RUN pip install --no-cache-dir \
     fastapi>=0.115.0 \
     uvicorn[standard]>=0.32.0 \
@@ -21,6 +28,8 @@ RUN pip install --no-cache-dir \
     python-multipart
 
 COPY backend/ .
+
+COPY --from=frontend /build/dist /app/static
 
 ENV PYTHONPATH=/app/src
 
